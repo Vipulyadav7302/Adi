@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+header {
+  background: #1db954;
+  color: #fdf8f8;
+  padding: 2em;
+  text-align: center;
+}
+.profile {
+  display: flex;
+  align-items: center;  /* vertical alignment */
+  gap: 650px;            /* image aur name ke beech gap */
+}
+#special-img{
+
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #333;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+   opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInLeft 3s forwards ease-out;
+    
+
+}
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1db954;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  width: 0;
+  animation: typing 2s steps(26) forwards;
+}
+
+.name::after {
+  content: '';
+  position: absolute;
+  top: 30%;        /* Cursor ki vertical position */
+  right: 0;
+  width: 2px;      /* Cursor ki thickness */
+  height: 40%;     /* Cursor ki height */
+  background-color: rgb(237, 247, 238);
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 26ch }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+
+img{
+  width: 150px;
+    margin: 10px;
+ 
+}
+
+.song-img {
+  width: 340px;
+  height: auto;
+  margin: 10px;
+  border-radius: 8px;
+  object-fit: cover;
+  
+}
+#song { 
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  width: max-content;
+  animation: scroll 5s infinite alternate linear;
+}
+
+.marquee img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Animation: scroll left to right and back */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+nav {
+  background-color: #222;
+  text-align: center;
+  padding: 1em;
+}
+
+nav a {
+  color: #1db954;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+iframe {
+  margin: 40px;  /* Video ke charo taraf 20px space */
+  padding: 10px; /* Video ke andar 10px padding */
+ /*display: block; /* Better layout */
+}
+main {
+  padding: 2em;
+}
+
+section {
+  margin-bottom: 3em;
+}
+
+h2 {
+  color: #1db954;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+a {
+  color: #1db954;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+  
+footer {
+  background-color: #1db954;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+}
